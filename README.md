@@ -18,7 +18,7 @@ __jacket__.run(input_img_src, input_txt, input_a_href, input_a_txt) // Note that
 // One-liner script
 new Jacket().run(input_img_src, input_txt, input_a_href, input_a_txt)
 
-// Example method (Changes all text to 'HACKED' and the other)
+// Example method (Changes all text elements to 'HACKED')
 new Jacket().example()
 ```
 
