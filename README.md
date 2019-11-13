@@ -8,6 +8,8 @@ I am not responsible on how you use this tool! If it affect your work or busines
 To use Jacket, one must make a new instance of the class itself. One can choose to either store the instance in a variable or just make it a one-liner script.
 
 ```javascript
+// Paste the script (from Jacket.js) into the Inspect Element's console then click enter. It should show 'undefined', you are all set!
+
 // Store it in a variable (note that the arguments are the constructor's argument)
 
 let __jacket__ = new Jacket(input_img_src, input_txt, input_a_href, input_a_txt);
@@ -16,3 +18,17 @@ __jacket__.run() // Note that the .run() function applies the 'Appearance and Te
 // One-liner script
 new Jacket(input_img_src, input_txt, input_a_href, input_a_txt).run()
 ```
+
+# API Docs
+-   `new Jacket(input_img_src, input_txt, input_a_href, input_a_txt)`
+    -   input_img_src (String or Boolean [Only `false`])
+        -   The image source link which replaces the `<img src=""></img>` 'src' part of the image tag. The argument must either be a image static link served over HTTPS or a `false` if replacing images is not necessary.
+
+    -   input_txt (String)
+        -   Changes the text contents of all text-based elements (h1, h2, h3, h4, h5, h6, span, p)
+
+    -   input_a_href (String)
+        -   Changes the href link of an anchor tag `<a href=""></a>`.
+
+    -   input_a_txt_ (String)
+        -   Changes the text display of an anchor tag `<a href="https://...">'TEXT CONTENTS HERE</a>`. It replaces the part 'TEXT CONTENTS HERE'.
