@@ -12,17 +12,20 @@ To use Jacket, one must make a new instance of the class itself. One can choose 
 
 // Store it in a variable (note that the arguments are the constructor's argument)
 
-let __jacket__ = new Jacket(input_img_src, input_txt, input_a_href, input_a_txt);
-__jacket__.run() // Note that the .run() function applies the 'Appearance and Text' change.
+let __jacket__ = new Jacket();
+__jacket__.run(input_img_src, input_txt, input_a_href, input_a_txt) // Note that the .run() function applies the 'Appearance and Text' change.
 
 // One-liner script
-new Jacket(input_img_src, input_txt, input_a_href, input_a_txt).run()
+new Jacket().run(input_img_src, input_txt, input_a_href, input_a_txt)
+
+// Example method (Changes all text to 'HACKED' and the other)
+new Jacket().example()
 ```
 
 # API Docs
--   `new Jacket(input_img_src, input_txt, input_a_href, input_a_txt)`
+-   `.run(input_img_src, input_txt, input_a_href, input_a_txt)`
     -   input_img_src (String or Boolean [Only `false`])
-        -   The image source link which replaces the `<img src=""></img>` 'src' part of the image tag. The argument must either be a image static link served over HTTPS or a `false` if replacing images is not necessary.
+        -   The image source link which replaces the `<img src=""></img>` 'src' part of the image tag. The argument must either be a static image link served over HTTPS or a `false` if replacing images is not necessary.
 
     -   input_txt (String)
         -   Changes the text contents of all text-based elements (h1, h2, h3, h4, h5, h6, span, p)
@@ -32,3 +35,6 @@ new Jacket(input_img_src, input_txt, input_a_href, input_a_txt).run()
 
     -   input_a_txt_ (String)
         -   Changes the text display of an anchor tag `<a href="https://...">'TEXT CONTENTS HERE</a>`. It replaces the part 'TEXT CONTENTS HERE'.
+
+-   `.example()`
+    -   Changes all the text elements to 'HACKED!'
